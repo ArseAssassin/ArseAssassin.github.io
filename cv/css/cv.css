@@ -1,0 +1,125 @@
+@media print {
+    body {
+        font-size:0.5em;
+    }
+    
+    a {
+        text-decoration:none;
+    }
+}
+
+body {
+    font-family:Georgia;
+    padding:2em;
+    color:#444;
+}
+
+h1 {
+    font-size:3em;
+    font-family:Century Gothic, Arial;
+    color:#333;
+}
+
+h2 {
+    font-size:1.2em;
+    text-transform:lowercase;
+    font-family:Arial;
+}
+
+h3 {
+    font-size:1.1em;
+    margin:0;
+    padding-bottom:2em;
+    text-transform:uppercase;
+    color:#222;
+    font-weight:bold;
+    font-family:Arial;
+}
+
+
+th {
+    width:20em;
+    text-align:left;
+    padding-bottom:1em;
+    font-family:Arial;
+}
+
+td, th {
+    vertical-align:top;
+}
+
+header {
+    background-color:#d9d9d9;
+    color:#666;
+    padding:2em 12em;
+    border:0.8em solid #ccc;
+    box-shadow: 0 0 1em #ccc;
+}
+
+h1, h2, h3, h4, p  {
+    margin:0;
+}
+
+.content {
+    margin:2em 0 2em 11em;
+    padding: 2em 2em 0 2em;
+    background-color:#fafafa;
+    box-shadow: 0px 0px 1em #ccc;
+}
+
+article {
+    margin-bottom:2em;
+    border-bottom:1em solid #d9d9d9;
+    padding-bottom:2em;
+    page-break-inside:avoid;
+}
+
+article:last-child {
+    border-bottom:0;
+}
+
+p, h4 {
+    font-size:1.4em;
+}
+
+a {
+    color:#444;
+}
+
+.job {
+    margin-bottom:2em;
+    overflow:auto;
+    font-family:Arial;
+}
+
+.job time {
+    float:right;
+    font-size:1.4em;
+    font-weight:bold;
+}
+
+.job h4 {
+    float:left;
+}
+
+.job .title {
+    float:left;
+    clear:left;
+    font-size:1.3em;
+}
+
+.description {
+    margin-right:7em;
+    margin-bottom:4em;
+}
+
+.description:last-chlid {
+    margin-bottom:0;
+}
+
+small {
+    font-size:0.8em;
+    color:#777;
+    vertical-align:super;
+    margin-left:0.3em;
+}

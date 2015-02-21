@@ -33,7 +33,10 @@ h1 {
 	margin-bottom: 30px;
 }
 
-
+.even h4 {
+  margin-top: 0;
+  line-height: 28px;
+}
 
 /* Paragraph & Typographic */
 p {
@@ -158,8 +161,11 @@ a:after {
 }
 
 .dark {
-  padding: 20px 0;
   background-color: #f2f2f2;
+}
+
+.dark, .light {
+  padding: 20px 0;
 }
 
 #footer {
@@ -289,12 +295,9 @@ img.preview {
   margin-bottom: 20px;
 }
 
-.section {
-  margin-bottom: 40px;
-}
-
 .list .badge {
   font-size: 18px;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.6);
 }
 
 .list a {
@@ -319,3 +322,28 @@ img.preview {
 .input-group-lg > textarea.form-control {
   height: initial;
 }
+
+@media print {
+  .section {
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+  }
+
+  .section:last-child {
+    border-bottom: 0;
+  }
+
+  .section p {
+    font-size: 13px;
+    line-height: normal;
+  }
+
+  .light, .dark {
+    margin: 0;
+  }
+
+  .badge {
+    font-weight: normal;
+  }
+}
+

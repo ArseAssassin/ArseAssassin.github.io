@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,8 +7,8 @@
 
     <title>Tuomas Kanerva</title>
 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="/assets/css/main.css" rel="stylesheet">
   </head>
 
@@ -19,17 +18,14 @@
     <div class="navbar navbar-inverse navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <a class="navbar-brand" href="index.html">TUOMAS KANERVA</a>
         </div>
-        <div class="navbar-collapse collapse">
+        <div class="">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#recent">Recent projects</a></li>
             <li><a href="#about_share">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#links">Links</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -66,8 +62,16 @@
 
         <div class="col-xs-12 col-sm-6 pull-left">
           <div class="row">
-            <div class="col-xs-12 col-sm-6"><img class="preview" src="/assets/img/projects/share1.jpg"></div>
-            <div class="col-xs-12 col-sm-6"><img class="preview" src="/assets/img/projects/share4.png"></div>
+            <div class="col-xs-12 col-sm-6">
+              <a href="#preview" class="preview-container">
+                <img class="preview" src="/assets/img/projects/share1.jpg">
+              </a>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <a href="#preview" class="preview-container">
+                <img class="preview" src="/assets/img/projects/share4.png">
+              </a>
+            </div>
           </div>
         </div>
 
@@ -93,7 +97,9 @@
 
         <div class="col-xs-12 col-sm-6 pull-right">
           <div class="row">
-            <img src="/assets/img/projects/github-logo.jpg" style="width: 100%">
+            <a href="#preview" class="preview-container">
+              <img src="/assets/img/projects/github-logo.jpg" style="width: 100%">
+            </a>
           </div>
         </div>
 
@@ -119,8 +125,15 @@
 
         <div class="col-xs-12 col-sm-6 pull-left">
           <div class="row">
-            <div class="col-xs-12 col-sm-6"><img class="preview" src="/assets/img/projects/rsa21.png"></div>
-            <div class="col-xs-12 col-sm-6"><img class="preview" src="/assets/img/projects/rsa22.png"></div>
+            <div class="col-xs-12 col-sm-6">
+              <a href="#preview" class="preview-container">
+                <img class="preview" src="/assets/img/projects/rsa21.png"></div>
+              </a>
+            <div class="col-xs-12 col-sm-6">
+              <a href="#preview" class="preview-container">
+                <img class="preview" src="/assets/img/projects/rsa22.png">
+              </a>
+            </div>
           </div>
         </div>
 
@@ -145,8 +158,17 @@
 
         <div class="col-xs-12 col-sm-6 pull-right">
           <div class="row">
-            <div class="col-xs-12 col-sm-6"><img class="preview" src="/assets/img/projects/climbing1.jpg"></div>
-            <div class="col-xs-12 col-sm-6"><img class="preview" src="/assets/img/projects/climbing2.jpg"></div>
+            <div class="col-xs-12 col-sm-6">
+              <a href="#preview" class="preview-container">
+                <img class="preview" src="/assets/img/projects/climbing1.jpg">
+              </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+              <a href="#preview" class="preview-container">
+                <img class="preview" src="/assets/img/projects/climbing2.jpg">
+              </a>
+            </div>
           </div>
         </div>
 
@@ -234,126 +256,146 @@
     </div>
     
     <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3 id="about_services">ABOUT: REACT + SERVICES</h3>
+        </div>
+
+        <div class="col-xs-12">
+          <p>
+            React + Service is a functional reactive programming library that solves the problem of wiring data to components in React. It lifts some concepts from the Flux architecture such as unidirectional data flow and combines it with functional programming concepts to create a simpler alternative for event based architectures.
+          </p>
+
+          <h4>
+            MY ROLE
+          </h4>
+
+          <p>
+            Sole designer, implementor and maintainer of the project.
+          </p>
+
+          <h4>
+            MOTIVATION
+          </h4>
+
+          <p>
+            Early while developing Share, we were having serious issues with data integrity. We used imperative style of programming to store mutable data locally and manually invalidated it when the data was changed. Since this usually resulted in immediate re-rendering of some components, which in turn could trigger further changes in the system, it was easy to accidentally introduce infinite loops and lifecycle issues into the system.
+          </p>
+
+          <p>
+            I took a look at some Flux based solutions to the problem, but couldn't help but feel that they felt needlessly heavy-handed. Often the syntax seemed to be full of redundant definitions and imperative concepts. The number of layers seemed unnecessarily high.
+          </p>
+
+          <h4>
+            SOLUTION
+          </h4>
+
+          <p>
+            In software engineering, mutable state is the root of all evil. Unfortunately, programs often need to do useful things based on user input, so the best thing we can do is to try handle that complexity. RS does this with signals.
+          </p>
+
+          <p>
+            In mathematics, a signal is defined as a function of time. Applications are often required to react to things like clicks and keypresses, so writing functions with only time as an input wouldn't be that useful. Therefore we have to replace time with the unit that the HTML DOM understands: events.
+          </p>
+
+          <h4>
+            So, if we're just gonna react to events, why bother with signals at all?
+          </h4>
+
+          <p>
+            Because they have some very interesting properties.
+          </p>
+
+          <ol>
+            <li>
+              <h4>Signals are continuous</h4>
+
+              <p>
+                That is to say that they always have a value. In React we are always interested in only rendering the current state of the application. If we have a promise for example that will be fulfilled after a HTTP request completes, we can't render it, because it doesn't have a value yet. Instead, we need to imperatively send it in a lifecycle method and modify local component state after it completes. 
+              </p>
+
+              <p>
+                Since a signal is essentially a state machine, it can be rendered at any point. We can declare in the component that it requires some data, and if that data is not yet available render a loading indicator. When the signal state changes, we can invalidate all components relying on that data.
+              </p>
+            </li>
+
+            <li>
+              <h4>Signals compose</h4>
+
+              <p>
+                <code>Signal(a) + Signal(b)</code> can be described as <code>Signal(a, b)</code>. When either <code>Signal(a)</code> or <code>Signal(b)</code> change, we know that the value of <code>Signal(a, b)</code> will change. Not in any other case. Therefore we can descibe the entire application state as a signal composed of every signal in the system.
+              </p>
+            </li>
+
+            <li>
+              <h4>Signals are explicit</h4>
+
+              <p>
+                Since a signal is a function of its input, there's no place for hidden state.
+              </p>
+            </li>
+          </ol>
+
+          <h4>CURRENT STATE</h4>
+
+          <p>
+            Right now React + Services is in production use in Petra's Planet Share. You can read the source code at <a href="https://github.com/ArseAssassin/react-services">Github</a>. Unfortunately the documentation is outdated. If you're interested in experimenting with RS, you can contact me via <a href="#contact">these channels</a> and I'll help you to get up and running.
+          </p>
+
+          <p class="list">
+            <span class="badge">react</span>
+            <span class="badge">coffeescript</span>
+            <span class="badge">gulp</span>
+            <span class="badge">browserify</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dark" id="links">
+      <div class="container" id="contact">
         <div class="row">
           <div class="col-xs-12">
-            <h3 id="about_services">ABOUT: REACT + SERVICES</h3>
+            <h3>CONTACT</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 pull-left">
+            <p>Fill this form with your contact details and the message you want to send me and I'll get back to you ASAP.</p>
           </div>
 
-          <div class="col-xs-12">
-            <p>
-              React + Service is a functional reactive programming library that solves the problem of wiring data to components in React. It lifts some concepts from the Flux architecture such as unidirectional data flow and combines it with functional programming concepts to create a simpler alternative for event based architectures.
-            </p>
+          <div class="col-xs-12 col-sm-6 pull-left">
+            <form class="contact"
+              method="POST" 
+              action="https://fwdform.herokuapp.com/user/91c257f3-630d-4c74-93fd-a89d8c93cbb9">
+              <p class="input-group-lg"><input class="form-control" name="email" placeholder="Your email"></p>
 
-            <h4>
-              MY ROLE
-            </h4>
+              <p class="input-group-lg"><input class="form-control" name="name" placeholder="Your name"></p>
 
-            <p>
-              Sole designer, implementor and maintainer of the project.
-            </p>
+              <p class="input-group-lg"><textarea class="form-control" name="message" placeholder="Your message" rows="4"></textarea></p>
 
-            <h4>
-              MOTIVATION
-            </h4>
-
-            <p>
-              Early while developing Share, we were having serious issues with data integrity. We used imperative style of programming to store mutable data locally and manually invalidated it when the data was changed. Since this usually resulted in immediate re-rendering of some components, which in turn could trigger further changes in the system, it was easy to accidentally introduce infinite loops and lifecycle issues into the system.
-            </p>
-
-            <p>
-              I took a look at some Flux based solutions to the problem, but couldn't help but feel that they felt needlessly heavy-handed. Often the syntax seemed to be full of redundant definitions and imperative concepts. The number of layers seemed unnecessarily high.
-            </p>
-
-            <h4>
-              SOLUTION
-            </h4>
-
-            <p>
-              In software engineering, mutable state is the root of all evil. Unfortunately, programs often need to do useful things based on user input, so the best thing we can do is to try handle that complexity. RS does this with signals.
-            </p>
-
-            <p>
-              In mathematics, a signal is defined as a function of time. Applications are often required to react to things like clicks and keypresses, so writing functions with only time as an input wouldn't be that useful. Therefore we have to replace time with the unit that the HTML DOM understands: events.
-            </p>
-
-            <h4>
-              So, if we're just gonna react to events, why bother with signals at all?
-            </h4>
-
-            <p>
-              Because they have some very interesting properties.
-            </p>
-
-            <ol>
-              <li>
-                <h4>Signals are continuous</h4>
-
-                <p>
-                  That is to say that they always have a value. In React we are always interested in only rendering the current state of the application. If we have a promise for example that will be fulfilled after a HTTP request completes, we can't render it, because it doesn't have a value yet. Instead, we need to imperatively send it in a lifecycle method and modify local component state after it completes. 
-                </p>
-
-                <p>
-                  Since a signal is essentially a state machine, it can be rendered at any point. We can declare in the component that it requires some data, and if that data is not yet available render a loading indicator. When the signal state changes, we can invalidate all components relying on that data.
-                </p>
-              </li>
-
-              <li>
-                <h4>Signals compose</h4>
-
-                <p>
-                  <code>Signal(a) + Signal(b)</code> can be described as <code>Signal(a, b)</code>. When either <code>Signal(a)</code> or <code>Signal(b)</code> change, we know that the value of <code>Signal(a, b)</code> will change. Not in any other case. Therefore we can descibe the entire application state as a signal composed of every signal in the system.
-                </p>
-              </li>
-
-              <li>
-                <h4>Signals are explicit</h4>
-
-                <p>
-                  Since a signal is a function of its input, there's no place for hidden state.
-                </p>
-              </li>
-            </ol>
-
-            <h4>CURRENT STATE</h4>
-
-            <p>
-              Right now React + Services is in production use in Petra's Planet Share. You can read the source code at <a href="https://github.com/ArseAssassin/react-services">Github</a>. Unfortunately the documentation is outdated. If you're interested in experimenting with RS, you can contact me via <a href="#contact">these channels</a> and I'll help you to get up and running.
-            </p>
-
-            <p class="list">
-              <span class="badge">react</span>
-              <span class="badge">coffeescript</span>
-              <span class="badge">gulp</span>
-              <span class="badge">browserify</span>
-            </p>
+              <p class="pull-right">
+                <button type="submit" class="btn btn-lg btn-success">Send</button>
+              </p>
+            </form>
           </div>
         </div>
       </div>
-    
-    
-    <!-- +++++ Footer Section +++++ -->
-    
+    </div>
+ 
+  
     <div id="footer">
-      <div class="container">
+      <div id="links" class="container">
         <div class="row">
-          <div class="col-lg-4">
-            <h4>Tuomas Kanerva</h4>
-            <p>
-              You can contact me via <br>
-              <a href="#contact">these channels</a>
-            </p>
-          </div><!-- /col-lg-4 -->
-          
-          <div class="col-lg-4">
-            <h4>My Links</h4>
-            <p>
-              <a href="https://github.com/ArseAssassin/">Github</a><br>
-              <a href="https://www.linkedin.com/profile/view?id=337603444">LinkedIn</a><br>
-              <a href="/cv/">My CV</a><br>
-            </p>
-          </div><!-- /col-lg-4 -->
-       </div>
-      
+          <div class="col-xs-12" style="text-align: center;">
+            <h4 style="padding-bottom: 0;">LINKS</h4>
+            <div class="list">
+              <a class="" href="https://github.com/ArseAssassin"><span class="fa fa-github fa-5x"></span></a>
+              <a class="" href="https://www.linkedin.com/profile/view?id=337603444"><span class="fa fa-linkedin fa-5x"></span></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

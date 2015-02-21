@@ -16,8 +16,6 @@ body {
     font-size: 14px;
     color: #555;
 
-    padding-top: 70px;
-
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
 }
@@ -97,10 +95,6 @@ a:after {
 }
 
 .navbar-static-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
 }
 
 .navbar-inverse {
@@ -170,8 +164,7 @@ a:after {
 
 #footer {
 	background-color: #2f2f2f;
-	padding-top: 50px;
-	padding-bottom: 50px; 
+	padding: 20px 0;
 }
 
 #footer p {
@@ -266,8 +259,32 @@ img.profile {
   border: 10px solid #ccc;
 }
 
+.preview-container:active {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 1000;
+
+  text-align: center;
+}
+
+.preview-container:active img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
 img.preview {
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 3px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
   margin-bottom: 20px;
@@ -279,4 +296,27 @@ img.preview {
 
 .list .badge {
   font-size: 18px;
+}
+
+.list a {
+  margin-left: 70px;
+  border-radius: 100%;
+  width: 120px;
+  line-height: 120px;
+
+  text-decoration: none;
+  padding: 0;
+}
+
+.list a .fa {
+  display: inline;
+  vertical-align: middle;
+}
+
+.list a:first-child {
+  margin-left: 0;
+}
+
+.input-group-lg > textarea.form-control {
+  height: initial;
 }

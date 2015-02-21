@@ -259,7 +259,7 @@ img.profile {
   border: 10px solid #ccc;
 }
 
-.preview-container:active {
+.preview-container.selected {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -267,19 +267,15 @@ img.profile {
   bottom: 0px;
 
   background-color: rgba(0, 0, 0, 0.5);
-
   z-index: 1000;
-
-  text-align: center;
 }
 
-.preview-container:active img {
+.preview-container.selected img {
   position: absolute;
   top: 50%;
   left: 50%;
 
   transform: translate(-50%, -50%);
-  pointer-events: none;
 }
 
 img.preview {

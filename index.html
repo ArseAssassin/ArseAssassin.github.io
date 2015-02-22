@@ -295,7 +295,7 @@
           </p>
 
           <p>
-            In mathematics, a signal is defined as a function of time. Applications are often required to react to things like clicks and keypresses, so writing functions with only time as an input wouldn't be that useful. Therefore we have to replace time with the unit that the HTML DOM understands: events.
+            In mathematics, a signal is defined as a function of time. Applications are often required to react to things like clicks and keypresses, so writing functions with only time as an input wouldn't be that useful. Therefore we have to replace time with a unit that the HTML DOM understands: events.
           </p>
 
           <h4>
@@ -311,11 +311,11 @@
               <h4>Signals are continuous</h4>
 
               <p>
-                That is to say that they always have a value. In React we are always interested in only rendering the current state of the application. If we have a promise for example that will be fulfilled after a HTTP request completes, we can't render it, because it doesn't have a value yet. Instead, we need to imperatively send it in a lifecycle method and modify local component state after it completes. 
+                That is to say that they always have a value. In React we are always interested in only rendering the current state of the application. If we have a promise for example that will be fulfilled after a HTTP request completes, we can't render it because it doesn't have a value yet. Instead, we need to hook it to a component method and modify local component state after it completes. 
               </p>
 
               <p>
-                Since a signal is essentially a state machine, it can be rendered at any point. We can declare in the component that it requires some data, and if that data is not yet available render a loading indicator. When the signal state changes, we can invalidate all components relying on that data.
+                Since a signal is essentially a state machine, it can be rendered at any point. We can declare in a component that it requires some data, and if that data is not available yet render a loading indicator. When the signal state changes, we can render the component with the newly acquired data.
               </p>
             </li>
 
@@ -323,7 +323,7 @@
               <h4>Signals compose</h4>
 
               <p>
-                <code>Signal(a) + Signal(b)</code> can be described as <code>Signal(a, b)</code>. When either <code>Signal(a)</code> or <code>Signal(b)</code> change, we know that the value of <code>Signal(a, b)</code> will change. Not in any other case. Therefore we can descibe the entire application state as a signal composed of every signal in the system.
+                <code>Signal(a) + Signal(b)</code> is of the type <code>Signal(a, b)</code>. When either <code>Signal(a)</code> or <code>Signal(b)</code> change, we know that the value of <code>Signal(a, b)</code> will change. Not in any other case. Therefore we can descibe the state of the entire application as a signal composed of every signal in the system.
               </p>
             </li>
 

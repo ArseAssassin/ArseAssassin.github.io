@@ -348,3 +348,32 @@ img.preview {
   }
 }
 
+
+
+#skills {
+  background-color: #e7e7e7;
+  margin-bottom: 50px;
+  color: #666;
+}
+
+#skills h3 {
+  float: left;
+  margin-right: 20px;
+  color: #666;
+}
+
+#skills .list {
+  float: left;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  #skills .list {
+    clear: left;
+    margin: 0 0 20px;
+  }
+}
+
+#skills .list div {
+  font-size: 20px;
+}

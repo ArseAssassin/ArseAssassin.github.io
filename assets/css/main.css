@@ -364,7 +364,7 @@ img.preview {
 
 #skills .list {
   float: left;
-  margin: 20px 0;
+  margin: 16px 0;
 }
 
 @media (max-width: 768px) {

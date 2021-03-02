@@ -304,6 +304,9 @@ img.preview {
   font-weight: initial;
   color: #555;
   background-color: #efefef;
+  border: 1px solid #e8e8e8;
+  border-right: 0px;
+  border-bottom: 0px;
 }
 
 .list a {

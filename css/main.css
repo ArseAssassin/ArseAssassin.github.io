@@ -102,6 +102,10 @@ h2 {
     section.resume-section .resume-item .resume-date {
         min-width: 18rem;
     }
+
+    section.resume-section .resume-item .resume-label {
+        min-width: 18rem;
+    }
 }
 @media (min-width: 992px) {
     section.resume-section {
@@ -158,4 +162,46 @@ section {
     color: #fff !important;
     border: 0;
     border-radius: 2rem;
+}
+
+.btn-primary:hover {
+    background-color: #803E25 !important;
+}
+
+.resume-label {
+    min-width: 8rem;
+}
+
+@media print {
+    section.resume-section {
+        padding: 1rem 0 !important;
+    }
+
+    body {
+        padding-top: 0;
+    }
+
+    .resume-item {
+        break-inside: avoid;
+    }
+
+    .resume-label {
+        min-width: 8rem !important;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hide-print {
+        display: none !important;
+    }
+
+    .resume-item.mb-5 {
+        margin-bottom: 2rem !important;
+    }
+
+    .avoid-break {
+        break-inside: avoid;
+    }
 }
